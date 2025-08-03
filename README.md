@@ -3,6 +3,7 @@ Smart Shopping Cart
 An innovative embedded system project that enhances customer experience in shopping malls through automation using RFID Firebase and IoT
 
  About Me
+ 
 Mercy Samuel 
 Bachelor of Technology in Electrical and Telecommunication Engineering  
 Meru University of Science and Technology,Kenya  
@@ -10,6 +11,7 @@ Meru University of Science and Technology,Kenya
 I’m passionate about using technology to solve real-world problems. One key moment that sparked my interest in programming and web development was when I started working on this Smart Shopping Cart project. I realized I needed to create a website but had no prior knowledge of coding. That challenge became the drive behind my journey into HTML, CSS, and web technologies — and I’ve loved learning ever since!
 
  Project Overview
+ 
 Shopping malls often experience long queues due to manual billing. The Smart Shopping Cart system solves this by automating product detection, price calculation, and checkout via mobile payment (M-Pesa), while also assisting customers in locating items within the mall.
 
 Key features:
