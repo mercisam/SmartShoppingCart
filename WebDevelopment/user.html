@@ -1,0 +1,303 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercy Samuel - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #6b46c1;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      max-width: 500px;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero-text a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #6b46c1;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .hero-text a:hover {
+      background-color: #553c9a;
+    }
+    .hero-img img {
+      width: 350px;
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+    #surprise-message {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    #about-content,
+    #education-content,
+    #project-content,
+    #skills-content,
+    #contact-content {
+      display: none;
+      padding: 2rem;
+      background-color: #e6f0ff;
+      border-radius: 1rem;
+      margin: 2rem;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    #skills-content h2,
+    #contact-content h2 {
+      text-align: center;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .skill-box {
+      padding: 1rem 2rem;
+      background-color: #6b46c1;
+      color: white;
+      border-radius: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: scale(1.05);
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 1.5rem;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: #f9f9ff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: #6b46c1;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #553c9a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mercy Samuel</h1>
+    <nav>
+      <a onclick="navigate('home')">Home</a>
+      <a onclick="navigate('about')">About</a>
+      <a onclick="navigate('education')">Education Background</a>
+      <a onclick="navigate('projects')">Project</a>
+      <a onclick="navigate('skills')">Skills</a>
+      <a onclick="navigate('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, I'm Mercy 👋</h2>
+      <p>A passionate developer who turned a challenge into creativity — inspired by building a Smart Shopping Cart that sparked my coding journey.</p>
+      <a onclick="showSurprise()">Click me for a surprise</a>
+      <div id="surprise-message"></div>
+    </div>
+    <div class="hero-img">
+      <img src="mercy-profile.jpg.jpg" alt="Mercy Samuel Profile" />
+    </div>
+  </section>
+
+  <section id="about-content">
+    <h2>About Me</h2>
+    <p>I'm Mercy Samuel, a passionate and curious tech enthusiast with a background in Electrical and Telecommunication Engineering. My journey into programming began with a project I deeply cared about — building a Smart Shopping Cart. The hardware side went well and the system worked, but when it came to creating a website for it, I had to let go of that part… because I had no idea how to code or build websites at the time.</p>
+    <p>That moment sparked something in me. I realized I wanted to learn how to bring both hardware and software together. It pushed me to explore software engineering, web development, and the creative world of coding. Since then, I’ve been on a mission to upskill and create tech solutions that are both innovative and complete.</p>
+    <p>I'm driven by the desire to never be limited again — and to inspire others who are just starting out, like I once did.</p>
+
+    <h3>Interests 💡</h3>
+    <p>
+      I'm deeply passionate about technology, especially in areas where innovation meets real-world solutions. My biggest excitement comes from building smart systems like my <strong>Smart Shopping Cart</strong>, which inspired me to dive deeper into programming and electronics.
+    </p>
+    <p>
+      I'm particularly interested in:
+      <ul>
+        <li>💻 Web Development – turning ideas into user-friendly interfaces</li>
+        <li>📡 Embedded Systems – integrating software with hardware</li>
+        <li>🔐 IoT & Automation – making life easier through connected devices</li>
+        <li>📱 Mobile Communication Technologies – exploring how networks power our world</li>
+      </ul>
+    </p>
+    <p>
+      I believe that technology should solve problems, not create them. My goal is to use tech for social good, especially in making everyday experiences smarter and more secure.
+    </p>
+  </section>
+
+  <section id="education-content">
+    <h2>Education Background</h2>
+    <p><strong>University:</strong> Meru University of Science and Technology</p>
+    <p><strong>Course:</strong> Bachelor of Technology in Electrical and Telecommunication Engineering</p>
+    <p><strong>Years:</strong> 2021 - 2025</p>
+  </section>
+
+  <section id="project-content">
+    <h2>Projects</h2>
+    <div class="project-title">🔌 Smart Shopping Cart</div>
+    <p>This project was designed to make shopping easier and smarter. Every time an item is placed into the cart, it is scanned using RFID, and the item details plus the total price are displayed on an interactive screen. The price updates automatically as more items are added or removed. After shopping, the user receives a prompt to pay via M-Pesa through their phone. If payment is not detected within a set time, a buzzer sounds an alarm, which can only be stopped by a staff member entering a PIN. The system also uses ESP8266 NodeMCU and CallMeBot to send an automatic WhatsApp message to the shopper, enhancing communication and security.</p>
+
+    <div class="project-title">💻 Personal Portfolio Website</div>
+    <p>This very site you're on was inspired by the same Smart Cart project! Initially, I couldn't build the site due to lack of coding knowledge. Now, after learning HTML, CSS, and JavaScript, I created this portfolio to showcase my skills, story, and journey as a growing developer.</p>
+  </section>
+
+  <section id="skills-content">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">Python</div>
+    </div>
+  </section>
+
+  <section id="contact-content">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Mercy Samuel. All rights reserved.
+  </footer>
+
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise-message").innerText = "🎉 Surprise! Thank you for visiting my portfolio! I'm passionate about building amazing projects. Let's connect! 🎉";
+    }
+
+    function navigate(section) {
+      const sections = {
+        home: document.getElementById("home"),
+        about: document.getElementById("about-content"),
+        education: document.getElementById("education-content"),
+        projects: document.getElementById("project-content"),
+        skills: document.getElementById("skills-content"),
+        contact: document.getElementById("contact-content"),
+      };
+
+      for (let key in sections) {
+        sections[key].style.display = "none";
+      }
+
+      if (section === "home") {
+        sections.home.style.display = "flex";
+      } else {
+        sections[section].style.display = "block";
+      }
+    }
+
+    window.onload = () => navigate('home');
+  </script>
+</body>
+</html>

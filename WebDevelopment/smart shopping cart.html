@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Shopping Cart | Project Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    header, footer {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      color: #004080;
+    }
+    a {
+      color: #004080;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Shopping Cart Project</h1>
+  </header>
+
+  <main>
+    <h2>Overview</h2>
+    <p> A shopping mall or a supermarket is a place where hundreds of customers visit every day to purchase many items making it sometimes overcrowded due to the availability of all the items ranging from groceries, clothes, vegetables, fruits, snacks etc. in one building. A trolley or a cart is required to collect the items in the shopping mall, be pulled forward or backward while collecting the items. After purchasing the product, the customer has to stand in a long queue for billing their products.
+Therefore, to address this challenge, I developed a smart shopping cart which is an innovative solution that enhances shopping experience through automation and advanced technology. This project integrates the use of Radio Frequency Identification technology (RFID) [ which is a wireless communication system that uses radio waves to identify and track objects and people. 
+The main objectives of this project is to streamline the shopping process, minimize manual effort and provide real time assistance to customers.
+The smart shopping cart automatically records items placed into the cart and displays their prices on an LCD screen. Each item has an RFID tag that communicates wirelessly with the carts RFID reader. As items are added or placed in the cart, their details are instantly detected and their prices added to the cart’s total, additionally when an item is removed, its cost is deducted, ensuring accurate real time tracking of purchases.
+The cart feature’s location guidance system that helps customers find items within the mall with much ease. This is achieved by integrating the cart with a digital mall map and item database. When a customer selects an item from the list, the cart displays its exact location, enabling quick and efficient navigation. After the completion of shopping, the customer presses the finish button in the trolley, and the total bill is displayed on the LCD, and the bill is transferred to the main computer. The total bill of the customer will be received as a message through a GSM module.
+A local database is maintained having information about the products and their location (section and rack number). Whenever a customer queries a search for a product, the product information is retrieved from the database and displayed using a pop – up window. To ease the querying process, the customer is provided with various dropdown menus for category and brand. Based on the input given by the user, the product is searched for in the database and retrieved accordingly. The zone of the product location is then highlighted on the module screen and the section name and rack number is displayed in a pop-up window.
+The buzzer produces an audible alert mechanism that is an alarm if the system detects an attempt to exit the store/shopping mall/ supermarket without completing the payment process. </p>
+
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Arduino Nano</li>
+      <li>ESP8266 NodeMCU</li>
+      <li>RFID RC522</li>
+      <li>Firebase Realtime Database</li>
+      <li>CallMeBot for WhatsApp integration</li>
+      <li>HTML/CSS (for this interface)</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>Each item has an RFID tag. As items are scanned, their data is read via RC522, total price is displayed on an LCD, and the customer is prompted to pay via M-Pesa. Upon timeout, a security breach alert is triggered if payment isn't made. Firebase logs the activity and notifies the user through WhatsApp via ESP8266.</p>
+
+    <h2>My Role</h2>
+    <p>I led the integration between hardware and cloud services, configured the Firebase database, designed the communication logic between the Arduino Nano and ESP8266, and handled user feedback interfaces.</p>
+
+    <h2>Links</h2>
+    <p><a href="https://github.com/mercysamuel/smart-shopping-cart" target="_blank">GitHub Repository</a></p>
+    <p><a href="index.html">← Back to Portfolio</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mercy Samuel</p>
+  </footer>
+</body>
+</html>
